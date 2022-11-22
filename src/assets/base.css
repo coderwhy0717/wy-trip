@@ -3,13 +3,17 @@
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
-
+    --primary-color: #ff9854;
+    --van-search-left-icon-color: var(--primary-color) !important;
+    --line-color: #f7f7f7;
+    --van-primary-color: var(--primary-color);
+    --theme-linear-gradient: linear-gradient(90deg, #fa8c1d, #fcaf3f);
+    --f999-linear-gradient: linear-gradient(90deg, #999999, #e4e4e4);
   --vt-c-black: #181818;
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
-
   --vt-c-indigo: #2c3e50;
-
+  --text-color: #b7b4b4;
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
@@ -64,7 +68,7 @@ body {
   color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
@@ -72,3 +76,109 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: '幼圆';
+
+}
+h2{
+  margin: 0;
+}
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+/* 样式的重置 */
+body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, input, td, th, ins {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+i, em {
+  font-style: normal;
+}
+
+input, textarea, button, select, a {
+  outline: none;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+
+.title {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.title3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+}
+.summaryText {
+  font-size: 11px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-emphasis: none;
+}
+.summaryText-no {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-emphasis: none;
+}
+
+
+.icon-dian {
+  background: url(../assets/img/page-home.png) no-repeat 0 9999px;
+
+}
+.cover-dt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  background-image: url(https://pic.tujia.com/upload/festatic/mp/map_bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+

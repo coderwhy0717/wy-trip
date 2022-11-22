@@ -1,44 +1,38 @@
 <template>
-  <div>
-    app
-  <router-view></router-view>
-  <van-tabbar v-model="active" active-color="red">
-  <van-tabbar-item icon="home-o" to="/home" >首页</van-tabbar-item>
-  <van-tabbar-item icon="like" to="/favor" >收藏</van-tabbar-item>
-  <van-tabbar-item icon="description" to="order">订单</van-tabbar-item>
-  <van-tabbar-item to="message">
-      <span>消息</span>
-      <template  #icon>
-        <van-icon name="comment" />
-      </template>
-  </van-tabbar-item>
-</van-tabbar>
+  <div class="app">
+    <router-view v-slot="props">
+      <keep-alive include="home,favor">
+        <component :is="props.Component"></component>
+      </keep-alive>
+    </router-view>
 
+    <Tabbar />
+    <loading />
+    <Calendar />
   </div>
 </template>
-
-
+<!--  --port 4173 -->
 <script setup>
-import { ref } from 'vue';
-
-  const active = ref(0)
+import Tabbar from './components/tabbar/tabbar.vue'
+import loading from './components/loading/loading.vue'
+import Calendar from './components/calendar/calendar.vue'
 </script>
 
 <style lang="less" scoped>
-  .tabs {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    box-shadow: 0px 1px 5px 1px rgb(100,100,100,0.8);
-    div {
-      flex: 1;
-      text-align: center;
-      justify-content: center;
-      border: 1px solid red;
-    }
-  }
+// .tabs {
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   display: flex;
+//   height: 50px;
+//   align-items: center;
+//   box-shadow: 0px 1px 5px 1px rgb(100, 100, 100, 0.8);
+//   div {
+//     flex: 1;
+//     text-align: center;
+//     justify-content: center;
+//     border: 1px solid red;
+//   }
+// }
 </style>

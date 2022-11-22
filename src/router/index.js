@@ -22,10 +22,28 @@ const router = createRouter({
         {
             path:'/message',
             component: () => import('@/views/message/message.vue')
+        },
+        {
+            path:'/city',
+            component:() => import('@/views/city/city.vue')
+        },
+        {
+          path:'/deail/:id',
+          component: () => import('@/views/detail/detail.vue'),
+          children:[
+
+          ]
+        },
+        {
+          path:'/location/map',
+          name: 'locationMap',
+          component:() => import('@/components/baidu-map/baidu-map.vue')
         }
 
     ]
 })
+
+
 
 
 export default router
