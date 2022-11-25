@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
 // import arraySupport from "dayjs/plugin/arraySupport"
 // dayjs.extend(arraySupport)
-
+// 自定义全局指令
 export default function directiveTime (app) {
   app.directive('time',{
     mounted(el,biandings) {
