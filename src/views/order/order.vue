@@ -1,6 +1,7 @@
 <template>
   <div class="order">
     <h2>order</h2>
+    <h2>order</h2>
     <div v-time="geshi">{{ time }}</div>
   </div>
 </template>
