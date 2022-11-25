@@ -1,7 +1,8 @@
 # wy-trip
-使用了vite框架 vant3组件库
 
-提交
+使用了 vite 框架 vant3 组件库
+
+提交提交
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
